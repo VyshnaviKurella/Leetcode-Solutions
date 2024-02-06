@@ -1,15 +1,7 @@
 class Solution(object):
     def hammingWeight(self, n):
-        """
-        :type n: int
-        :rtype: int
-        """
-        n= list(bin(n))
-        count=0
-        # print(n)
-        for i in range(len(n)):
-            if n[i] == "1":
-                count +=1
-        return count
-
-
+        set_bit_count = 0
+        while n != 0:
+            n &= (n - 1)
+            set_bit_count += 1
+        return set_bit_count
