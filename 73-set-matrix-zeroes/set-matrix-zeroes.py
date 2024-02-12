@@ -9,7 +9,7 @@ class Solution(object):
         for row in range(len(matrix)):
             for col in range(len(matrix[0])):
                 if matrix[row][col] ==0:
-                    print(row,col)
+                    # print(row,col)
                     if row not in rows:
                         rows.append(row)
                     if col not in cols:
@@ -21,7 +21,7 @@ class Solution(object):
         for i in cols:
             for row in range(len(matrix)):
                 matrix[row][i] = 0
-        print(rows,cols)
+        # print(rows,cols)
 
         
         
